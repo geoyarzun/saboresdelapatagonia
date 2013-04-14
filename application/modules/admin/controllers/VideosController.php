@@ -21,7 +21,7 @@ class Admin_VideosController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->estado3 = 'active';
+//        $this->view->estado3 = 'active';
         
         // Título de la vista
         $this->view->title = "Mis Videos";
@@ -69,7 +69,7 @@ class Admin_VideosController extends Zend_Controller_Action
                  
                  $videos = new Admin_Model_Videos(); 
                  $videos ->updateVideo($id, $nombre, $url); 
-                 $this->_redirect('/admin/videos/index/page/'); 
+                 $this->_redirect('/admin/videos/index'); 
             } else { 
                  $form->populate($formData); 
             } 
