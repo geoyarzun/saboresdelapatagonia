@@ -1,0 +1,64 @@
+<div class="grid-1">
+    <div class="title-grid"><span>Mi Perfil</span></div>
+    <div class="content-gird">
+            <div id="calendar"></div>
+            
+            <?php // print_r($this->user->id); ?>
+            
+            
+            <?php //echo $this->form ?>
+
+                <?php if($this->listaUsuario->count() > 0): ?>
+                        <table id="example">
+                                
+                                <?php foreach($this->listaUsuario as $usuario): ?>
+                                <?php if(($usuario->getId()) == ($this->user->id)): ?>
+<!--                                <tr>    
+                                    <th>Id</th>
+                                        <td></td>
+                                </tr>-->
+                                
+                            
+                                <tr>
+                                    <th>Nombre</th>
+                                        <td><?php echo $usuario->getNombre() ?></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Apellido</th>
+                                        <td><?php echo $usuario->getApellido() ?></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Email</th>
+                                        <td><?php echo $usuario->getEmail() ?></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Clave</th>
+                                        <td><?php echo $usuario->getClave() ?></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Acciones</th>
+                                    <td>
+                                        <a href="<?php echo $this->baseUrl ?>/admin/MiPerfil/editar/id/<?php echo $usuario->getId() ?>/">editar</a>
+                                        
+                                    </td>
+                                </tr>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+                        </table>
+                <?php else: ?>
+                        <p>Lo sentimos, usuario <strong>no</strong> encontrado en el sistema</p>
+                <?php endif;?>
+            
+            
+            <?php // echo $this->form ?>
+            
+        <div class="clear"> </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.11.11">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <apisDirectory enabled="false"/>
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+      </controllersDirectory>
+      <formsDirectory enabled="false"/>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
+      <modelsDirectory>
+        <modelFile modelName="Login"/>
+      </modelsDirectory>
+      <modulesDirectory>
+        <moduleDirectory moduleName="admin">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Login">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="errorLogin"/>
+            </controllerFile>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Calendario">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="estaca"/>
+              <actionMethod actionName="miBarrio"/>
+            </controllerFile>
+            <controllerFile controllerName="Perfil">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="MiCuenta">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="MiPerfil">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="editar"/>
+            </controllerFile>
+            <controllerFile controllerName="Contactos">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Video">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Multimedia">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Fotos">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Reservas">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory>
+            <formFile formName="Login"/>
+            <formFile formName="Videos"/>
+            <formFile formName="UploadForm"/>
+            <formFile formName="Usuario"/>
+          </formsDirectory>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory>
+            <dbTableDirectory>
+              <dbTableFile dbTableName="Login"/>
+              <dbTableFile dbTableName="Usuario"/>
+            </dbTableDirectory>
+            <modelFile modelName="Login"/>
+            <modelFile modelName="Usuario"/>
+            <modelFile modelName="Videos"/>
+            <modelFile modelName="MiPerfil"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
+                <viewScriptFile forActionName="errorLogin"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Calendario">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Calendario">
+                <viewScriptFile forActionName="estaca"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Calendario">
+                <viewScriptFile forActionName="miBarrio"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfil">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="MiCuenta">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="MiPerfil">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Contactos">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Video">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Multimedia">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Fotos">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="MiPerfil">
+                <viewScriptFile forActionName="editar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Reservas">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="default">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory/>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+      </modulesDirectory>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index"/>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

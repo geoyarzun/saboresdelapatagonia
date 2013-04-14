@@ -1,0 +1,19 @@
+                    
+                    
+                        <?php if($this->listaUsuario->count() > 0): ?>
+                        
+			<li id="a"><a name="a" class="title">A</a>
+				<ul>
+                                    <?php foreach($this->listaUsuario as $usuario): ?>
+					<li><a href=""><?php echo $usuario->getNombre().' '.$usuario->getApellido() ?></a></li>
+                                    <?php endforeach; ?>
+				</ul>
+			</li>
+                        
+                        <?php else: ?>
+                        <p>Lo sentimos, usuario <strong>no</strong> encontrado en el sistema</p>
+                        <?php endif;?>
+                        
+                        
+                        
+

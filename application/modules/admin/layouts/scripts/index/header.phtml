@@ -1,0 +1,21 @@
+  <div class="centered" id="bagraund-header">
+        <div id="logo">
+			<a href="<?php echo $this->baseUrl() ?>/admin"></a>
+		</div>
+ 
+		<div id="user-panel">
+			<ul>
+                            <li><p>Bienvenido,&nbsp;<strong><?php echo $this->user->nombre;?> <?php echo $this->user->apellido;?></strong></p>  <li>
+				<li><a href="<?php echo $this->baseUrl()?>/admin/MiPerfil">Mi Cuenta</a>  <span></span>  <a href="<?php echo $this->baseUrl() ?>/admin/login/logout">Salir</a><li>
+                        </ul>
+            
+<!--            <div id="search">
+                <form>
+            	<input type="text" value="Start Searching..." onblur="if(this.value=='') this.value='Start Searching...';" onfocus="if(this.value=='Start Searching...') this.value='';" >
+            	<div class="submit">
+				<input type="image" src="images/px.gif" title="Search" alt="Search" />
+				</div>
+                </form>
+            </div> -->
+ 		</div>        
+       </div>

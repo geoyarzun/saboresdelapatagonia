@@ -1,0 +1,39 @@
+<div class="grid-1">
+    <div class="title-grid"><span>>> Multimedia >> Videos</span></div>
+    <div class="content-gird">
+            <div id="calendar"></div>
+            
+                <p><a href="<?php echo $this->url(array('controller'=>'videos','action'=>'agregar'));?>">Agregar video</a></p>
+            
+
+        <?php //var_dump( $this->pagina )?>
+
+        <!--                Paginador        -->            
+        <?php echo $this->paginationControl($this->videos, 'Sliding', 'index/pagination/pagination_control.phtml');?>              
+        <table>
+        <tr>
+                <td>Nombre </td>
+                <td>Video</td>
+                <td>Acci&oacute;n</td>
+        </tr>
+        <?php foreach($this->videos as $videos): ?>
+
+        <tr>
+                <td><?php echo $videos['nombre']; ?></td>
+                <td><?php echo $videos['url']; ?></td>
+
+                <td> 
+                    <a href="<?php echo $this->url(array('controller'=>'videos','action'=>'editar','id'=>$videos->id));?>">Editar</a> 
+                    <a href="<?php echo $this->url(array('controller'=>'videos','action'=>'eliminar','id'=>$videos->id));?>">Borrar</a> 
+                </td> 
+
+        </tr>
+
+        <?php  endforeach; ?>
+        </table>            
+
+        <?php echo $this->paginationControl($this->videos, 'Sliding', 'index/pagination/pagination_control.phtml');?>  
+
+                <div class="clear"> </div>
+    </div>
+</div>

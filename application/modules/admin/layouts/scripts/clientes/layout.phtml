@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sistema Administrativo - Contactos</title>
+	<meta name="description" content="">
+    <meta name="author" content="vladproduction.ru">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    
+    <?php  $this->headLink()
+                ->prependStylesheet($this->baseUrl().'/css/style.css','screen')                                  
+                ->prependStylesheet($this->baseUrl().'/css/jquery-ui-1.8.16.custom.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/tables.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/fancybox.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/jquery.confirm.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/chosen.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/fullcalendar.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/elfinder/css/elfinder.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/editor/jquery.wysiwyg.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/editor/default.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/tipTip.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/cssfamilyCuprum.css','screen')
+    ?>       
+    
+    
+    
+<!--	<link rel="stylesheet" href="css/style.css" media="screen"  />
+    <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css" media="screen"  />
+    <link rel="stylesheet" href="css/tables.css" media="screen"  />
+    <link rel="stylesheet" href="css/fancybox.css" media="screen"  />
+    <link rel="stylesheet" href="css/jquery.confirm.css" media="screen"  />
+    <link rel="stylesheet" href="css/chosen.css" media="screen"  />
+    <link rel="stylesheet" href="css/fullcalendar.css" media="screen"  />
+    <link rel="stylesheet" href="lib/elfinder/css/elfinder.css" media="screen" />
+    <link rel="stylesheet" href="lib/editor/jquery.wysiwyg.css" media="screen" />
+    <link rel="stylesheet" href="lib/editor/default.css" media="screen" />
+	<link rel="stylesheet" href="css/tipTip.css" media="screen" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cuprum" />-->
+    
+    
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+	<!-- Use Google CDN for jQuery and jQuery UI -->
+
+<!--        <script src="lib/jquery.min.js"></script>-->
+<!--	<script src="lib/jquery-ui-1.8.16.custom.min.js"></script>-->
+	<!-- some basic functions -->
+<!--    <script src="lib/functions.js"></script>-->
+    <!-- all Third Party Plugins -->
+<!--    <script src="lib/jquery.dataTables.min.js"></script>-->
+<!--    <script src="lib/fancybox/fancybox.js"></script>-->
+<!--    <script src="lib/jquery.confirm.js"></script>-->
+<!--    <script src="lib/chosen.jquery.min.js"></script>-->
+<!--    <script src="lib/fullcalendar.min.js"></script>-->
+<!--    <script src="lib/elfinder/js/elfinder.min.js" charset="utf-8"></script>-->
+<!--    <script src="lib/editor/jquery.wysiwyg.js" charset="utf-8"></script>-->
+<!--    <script src="lib/editor/wysiwyg.image.js" charset="utf-8"></script>
+	<script src="lib/editor/default.js" charset="utf-8"></script>
+    <script src="lib/editor/wysiwyg.link.js" charset="utf-8"></script>
+    <script src="lib/editor/wysiwyg.table.js" charset="utf-8"></script>
+	<script src="lib/jquery.tipTip.minified.js"></script>-->
+<!--    <script src="lib/forms.js"></script>
+    <script src="lib/autoresize.jquery.min.js"></script>
+    <script type="text/javascript" src="lib/validation.js"></script>
+    <script src="lib/jquery.jgrowl_minimized.js"></script>
+    <script src="lib/slidernav-min.js"></script>-->
+<!--    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="lib/jquery.gvChart-1.0.1.min.js"></script>-->
+    
+    
+     
+    
+    
+        <?php      
+    $this->headScript()            
+            ->appendFile($this->baseUrl().'/lib/jquery.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery-ui-1.8.16.custom.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/functions.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery.dataTables.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/fancybox/fancybox.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery.confirm.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/chosen.jquery.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/fullcalendar.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/elfinder/js/elfinder.min.js','text/javascript')            
+            ->appendFile($this->baseUrl().'/lib/editor/jquery.wysiwyg.js','text/javascript')            
+            ->appendFile($this->baseUrl().'/lib/editor/wysiwyg.image.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/editor/default.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/editor/wysiwyg.link.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/editor/wysiwyg.table.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery.tipTip.minified.js','text/javascript')            
+            ->appendFile($this->baseUrl().'/lib/forms.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/autoresize.jquery.min.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/validation.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery.jgrowl_minimized.js','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/slidernav-min.js','text/javascript')            
+            ->appendFile('http://www.google.com/jsapi','text/javascript')
+            ->appendFile($this->baseUrl().'/lib/jquery.gvChart-1.0.1.min.js','text/javascript')
+    
+    ?>
+        
+        <?php echo $this->headScript() ?>
+        <?php echo $this->headLink() ?>
+    
+    
+	<script>gvChartInit();</script>
+	
+</head>
+
+<body>
+<section id="main-content">
+ <header>
+	  <div class="centered" id="bagraund-header">
+        <div id="logo">
+<!--			<a href="#"><img src="images/px.gif" width="230" height="80" alt="My admin"></a>-->
+		</div>
+ 
+		<div id="user-panel">
+			<ul>
+                            <li><p>Bienvenido,&nbsp;<strong><?php echo $this->user->nombre;?> <?php echo $this->user->apellido;?></strong></p>  <li>
+				<li><a href="<?php echo $this->baseUrl()?>/admin/MiPerfil">Mi Cuenta</a>  <span></span>  <a href="<?php echo $this->baseUrl() ?>/admin/login/logout">Salir</a><li>
+            </ul>
+            
+<!--            <div id="search">
+                <form>
+            	<input type="text" value="Start Searching..." onblur="if(this.value=='') this.value='Start Searching...';" onfocus="if(this.value=='Start Searching...') this.value='';" >
+            	<div class="submit">
+				<input type="image" src="images/px.gif" title="Search" alt="Search" />
+				</div>
+                </form>
+            </div> -->
+ 		</div>  
+       </div>
+ </header>
+	<nav>
+    	<div class="centered">
+              <ul id="main-nav"> 
+                <li id="<?php echo $this->estado1 ?>"><a href="<?php echo $this->baseUrl() ?>/admin"><span>Portal</span></a></li> 
+
+                <li><a href="<?php echo $this->baseUrl() ?>/admin/multimedia/index"><span>Multimedia</span></a>
+                    <ul>
+                        <li><a href="<?php echo $this->baseUrl() ?>/admin/videos/index"><span>Videos</span></a></li>
+                        <li><a href="<?php echo $this->baseUrl() ?>/admin/fotos/index"><span>Fotos</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo $this->baseUrl() ?>/admin/reservas/index"><span>Reservas</span></a></li>
+                <li><a href="<?php echo $this->baseUrl() ?>/admin"><span>Inventario</span></a></li>
+                <li id="<?php echo $this->estado8; ?>"><a href="<?php echo $this->baseUrl() ?>/admin/clientes"><span>Lista de Clientes</span></a></li>       
+             </ul>
+             
+             <ul id="main-nav-two">                   
+                <li><a href="<?php echo $this->baseUrl() ?>/admin">Mensajes</a><span class="counter">22</span></li>
+                <li class="separator"></li>
+                <li><a href="<?php echo $this->baseUrl() ?>/admin">Configuraci&oacute;n</a></li>  
+             </ul>
+		</div>
+	</nav>
+
+
+ <section id="content">
+  <div class="centered">
+ 	
+         <!--Contacts -->
+            <div class="grid-1">
+           <div class="title-grid"><span>Contact List</span></div>
+           <div class="content-gird">
+         
+     <div id="slider-contact">
+	  <div class="slider-content">
+		<ul>
+                    <?php echo $this->layout()->content; ?>
+                    
+		</ul>
+	</div>
+</div>
+         
+         
+           </div>
+        </div>  
+		<!--Contacts end-->
+      
+    
+           
+       </div><!--end center-->  
+ </section>  <!--end content-->   
+
+<div class="empty"></div>
+</section>   <!--end main-content-->     
+             
+ <footer>
+      <div class="info-tooter">
+        	<div id="left">© Copyright website.com</div>
+            <ul id="right">
+            	<li><a href="#tabs-6">Feedback</a></li>
+                <li><a href="#tabs-6">Support</a></li>
+            </ul>
+      </div>
+ </footer>
+ 
+<script>
+$(function(){
+
+			var chart1;                        
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container2',
+						defaultSeriesType: 'line'
+					},
+					title: {
+						text: 'Monthly Average Temperature'
+					},
+					subtitle: {
+						text: 'Source: VladProduction & Lavrinyuk Dmytri'
+					},
+					xAxis: {
+						categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+					},
+					yAxis: {
+						title: {
+							text: 'Temperature (°C)'
+						}
+					},
+					tooltip: {
+						enabled: false,
+						formatter: function() {
+							return '<b>'+ this.series.name +'</b><br/>'+
+								this.x +': '+ this.y +'°C';
+						}
+					},
+					plotOptions: {
+						line: {
+							dataLabels: {
+								enabled: true
+							},
+							enableMouseTracking: false
+						}
+					},
+					series: [{
+						name: 'Tokyo',
+						data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+					}, {
+						name: 'London',
+						data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+					}]
+			});
+
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container3',
+						defaultSeriesType: 'area'
+					},
+					title: {
+						text: 'Area chart with negative values'
+					},
+					xAxis: {
+						categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+					},
+					tooltip: {
+						formatter: function() {
+							return ''+
+								 this.series.name +': '+ this.y +'';
+						}
+					},
+					credits: {
+						enabled: false
+					},
+					series: [{
+						name: 'John',
+						data: [5, 3, 4, 7, 2]
+					}, {
+						name: 'Jane',
+						data: [2, -2, -3, 2, 1]
+					}, {
+						name: 'Joe',
+						data: [3, 4, 4, -2, 5]
+					}]
+			
+				
+				
+			});
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container4',
+						defaultSeriesType: 'column'
+					},
+					title: {
+						text: 'Monthly Average Rainfall'
+					},
+					subtitle: {
+						text: 'Source: VladProduction & Lavrinyuk Dmytri'
+					},
+					xAxis: {
+						categories: [
+							'Jan', 
+							'Feb', 
+							'Mar', 
+							'Apr', 
+							'May', 
+							'Jun', 
+							'Jul', 
+							'Aug', 
+							'Sep', 
+							'Oct', 
+							'Nov', 
+							'Dec'
+						]
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: 'Rainfall (mm)'
+						}
+					},
+					legend: {
+						layout: 'vertical',
+						backgroundColor: '#FFFFFF',
+						align: 'left',
+						verticalAlign: 'top',
+						x: 100,
+						y: 70,
+						floating: true,
+						shadow: true
+					},
+					tooltip: {
+						formatter: function() {
+							return ''+
+								this.x +': '+ this.y +' mm';
+						}
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						}
+					},
+				        series: [{
+						name: 'Tokyo',
+						data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+				
+					}, {
+						name: 'New York',
+						data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+				
+					}, {
+						name: 'London',
+						data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+				
+					}, {
+						name: 'Berlin',
+						data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+				
+					}]
+			});
+
+	
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container5',
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false
+					},
+					title: {
+						text: 'Browser market shares at a specific website, 2010'
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+						}
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								color: '#000000',
+								connectorColor: '#000000',
+								formatter: function() {
+									return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+								}
+							}
+						}
+					},
+				    series: [{
+						type: 'pie',
+						name: 'Browser share',
+						data: [
+							['Firefox',   45.0],
+							['IE',       26.8],
+							{
+								name: 'Chrome',    
+								y: 12.8,
+								sliced: true,
+								selected: true
+							},
+							['Safari',    8.5],
+							['Opera',     6.2],
+							['Others',   0.7]
+						]
+					}]
+			});
+});
+</script>
+</body>
+</html>

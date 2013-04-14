@@ -1,0 +1,135 @@
+.dataTables_wrapper {
+	position: relative;
+	clear: both;
+	zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 30px;
+	margin-left: -125px;
+	margin-top: -15px;
+	padding: 14px 0 2px 0;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	background-color: white;
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	width: 60%;
+	float: left;
+}
+
+.dataTables_paginate {
+	width: 55px;
+	* width: 55px;
+	float: right;
+	text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 24px;
+	width: 24px;
+	float: left;
+	cursor:pointer;
+}
+
+#example_length {width:300px; margin-bottom:5px; }
+
+#example_info, #example_paginate {
+	margin-top:10px;
+}
+
+#example_paginate {
+	margin-bottom:10px;
+}
+
+#example_previous {
+	margin-right:5px;
+}
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.png');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.png');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.png');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.png');
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+*/
+
+.display {
+	clear: both;
+	width:100%;
+}
+
+.display tbody tr td {
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background-color:#CCC;
+}
+
+.sorting_desc {
+	background-color:#CCC;
+}
+
+
+/* TH STYLE */
+.th_chexbox {
+	width:15px;
+}
+.th_title {
+	width:212px;
+}
+.th_status {
+	width:100px;
+}
+.th_date {
+	width:170px;
+}
+.th_author {
+	width:150px;
+}
+.th_images {
+	width:50px;
+}
+.th_action {
+	width:67px;
+}

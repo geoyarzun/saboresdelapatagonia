@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sabores de la Patagonia | Administración</title>
+	<meta name="description" content="">
+    <meta name="author" content="vladproduction.ru">
+    <link rel="shortcut icon" href="<?php echo $this->baseUrl; ?>images/favicon.ico" />
+    
+      
+        <?php  $this->headLink()
+                ->prependStylesheet($this->baseUrl().'/css/style.css','screen')                                  
+                ->prependStylesheet($this->baseUrl().'/css/jquery-ui-1.8.16.custom.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/tables.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/fancybox.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/jquery.confirm.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/chosen.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/fullcalendar.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/elfinder/css/elfinder.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/editor/jquery.wysiwyg.css','screen')
+                ->prependStylesheet($this->baseUrl().'/lib/editor/default.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/tipTip.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/fullcalendar.css','screen')
+                ->prependStylesheet($this->baseUrl().'/css/cssfamilyCuprum.css','screen')
+    ?>       
+    
+    <?php      
+    $this->headScript()            
+//            ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js','text/javascript')
+//            ->appendFile($this->baseUrl().'/lib/jquery-ui-1.8.16.custom.min.js','text/javascript')
+
+    
+    ?>
+        
+        <?php echo $this->headScript() ?><script>//gvChartInit();</script>
+        <?php echo $this->headLink() ?>
+    
+    
+    
+</head>
+
+<body>
+<section id="main-content">
+ <header>
+	<?php echo $this->render('header.phtml') ?>
+ </header>
+	<nav>
+    	<?php echo $this->render('nav.phtml') ?>
+	</nav>
+
+ <section id="content">
+     <div class="centered">
+        <?php echo $this->layout()->content; ?>
+    </div><!--end center--> 
+ </section>  <!--end content-->   
+
+<div class="empty"></div>
+</section>   <!--end main-content-->     
+             
+ <footer>
+     <?php echo $this->render('footer.phtml') ?>
+ </footer>
+
+</body>
+</html>

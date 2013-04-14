@@ -1,0 +1,44 @@
+/* Reset */
+html,body,div,span,applet,object,iframe,input,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+		margin:0;
+		padding:0;
+	}
+	
+	html, body, textarea, input { 
+		font-family: Helvetica, Arial, sans-serif;
+		font-size:12px;
+		-webkit-text-size-adjust:none;
+	}
+	body {
+		background-image:url(../images/body_bg.png);
+	}
+	.content {
+		width:500px;
+		margin:auto;
+	}
+	.notfound {
+		background-image:url(../images/404.png);
+		width:454px;
+		height:631px;
+	}
+	.information-message {
+		margin-top:-100px;
+	}
+	#heading {
+		background-color:#000; font-family:'Cuprum',Helvetica, Arial, sans-serif; font-size:18px; padding:5px; color:#FFF; width:150px;
+	}
+	p {
+		color:#131313;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:12px;
+		padding-top:10px;
+	}
+	a {
+		color:#0065a5;
+	}
+	a:hover {
+		text-decoration:none;
+	}
+	.text-gray {
+		color:#616160;
+	}

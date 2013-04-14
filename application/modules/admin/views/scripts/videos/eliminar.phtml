@@ -1,0 +1,21 @@
+<div class="grid-1">
+    <div class="title-grid"><span>Multimedia - Videos</span></div>
+    <div class="content-gird">
+            <div id="calendar"></div>
+
+            
+                <p>Est&aacute; seguro de querer borrar el video: 
+                <?php echo $this->escape($this->video['nombre']); ?> 
+                    <?php //echo $this->escape($this->video['url']); ?>? 
+                </p> 
+                <form action="<?php echo $this->url(array('action'=>'eliminar')); ?>" method="post"> 
+                <div> 
+                <input type="hidden" name="id" value="<?php echo $this->video['id']; ?>" /> 
+                <input type="submit" name="del" value="Yes" /> 
+                <input type="submit" name="del" value="No" /> 
+                </div>
+
+            
+        <div class="clear"> </div>
+    </div>
+</div>
